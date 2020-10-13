@@ -1,0 +1,405 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+:root {
+    --dark: #1a1a1aff;
+    --gray: #7c7c7c;
+    --grayDark: #525252;
+    --grayWhite: #e3dedbff;
+    --whiteGray: #ecececff;
+    /* Green colors */
+    --greenDark: #1e261eff;
+    --green: #2ea12eff;
+    --darkGreen: #333333ff;
+    --greenGrayDark: #1e2621ff;
+    --greenGray: #394940ff;
+    --greenGrayLight: #526c5cff;
+    /* Primary-secondary */
+    --primary: #00a900ff;
+}
+body {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 16px;
+}
+a {
+    text-decoration: none;
+    color: var(--dark);
+}
+button {
+    padding: 0.8rem 1.2rem;
+    border: 0;
+    background: transparent;
+    transition: 1s background-color;
+    cursor: pointer;
+}
+b {
+    font-weight: 700;
+}
+h1,h2,h3,h4,h5,h6 {font-weight: 700;}
+h1.light,h2.light,h3.light,h4.light,h5.light,h6.light {font-weight: 300;}
+
+/* Containers */
+.container-normal {
+    width: 100%;
+    max-width: 1300px;
+}
+.container-medium {
+    width: 100%;
+    max-width: 720px;
+}
+.container-small {
+    width: 100%;
+    max-width: 600px;
+}
+
+.container {
+    padding: 50px;
+}
+.container-small {
+    padding: 25px;
+}
+.container-small-horizontal {
+    padding: 25px 0;
+}
+.container-vertical {
+    padding: 0 50px;
+}
+
+/* Buttons */
+.btn-small {
+    padding: 1rem 1.2rem;
+}
+.btn-large {
+    padding: 1rem 2.5rem;
+}
+
+/* Font colors */
+a.white {
+    color: white;
+}
+button.primary {
+    background: var(--primary);
+    color: white;
+}
+button.primary a {
+    color: white;
+}
+
+/* Sections */
+.section {
+    padding-top: 70px;
+}
+.section > .container {
+    margin: auto;
+}
+.section > .container > .title::before {
+    content: '';
+    border: 5px solid var(--green);
+    margin-right: 15px;
+}
+.section > .container > .title {
+    font-size: 32px;
+    color: var(--darkGreen);
+    margin-bottom: 30px;
+}
+/* ===============================================
+ # Header
+   =============================================== */
+#header-navigation .primary-menu {
+    height: 65px;
+    background: var(--green);
+}
+#header-navigation .secondary-menu {
+    height: 35px;
+    background: var(--greenDark);
+}
+#header-navigation .container-vertical {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100%;
+    margin: 0 auto;
+}
+
+/* Primary menu */
+#header-navigation .logo {
+    font-size: 22px;
+    font-weight: 900;
+    text-transform: uppercase;
+    color: white;
+}
+#header-navigation nav a {
+    color: white;
+    font-size: 14px;
+    text-transform: uppercase;
+    margin-left: 10px;
+}
+
+/* Secondary menu */
+#header-navigation .secondary-menu .left {
+    display: flex;
+}
+#header-navigation .secondary-menu .left p {
+    margin-right: 10px;
+    color: var(--greenGrayLight);
+    font-size: 14px;
+}
+#header-navigation .secondary-menu .right a {
+    font-size: 14px;
+    color: var(--greenGrayLight);
+}
+
+/* ===============================================
+ # Hero section
+   =============================================== */
+header#hero {
+    width: 100%;
+    height: 550px;
+    background: black;
+}
+
+/* Image background */
+#hero .img-bg {
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+}
+#hero .img-bg img {
+    width: 100%;
+    opacity: 40%;
+}
+
+/* Hero content */
+#hero .content {
+    position: absolute;
+    z-index: 10;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#hero .title,
+#hero .description {
+    color: white;
+    margin-bottom: 1.2rem;
+}
+#hero .content .container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+#hero .title {
+    font-size: 32px;
+}
+#hero .description {
+    font-size: 22px;
+    font-weight: 300;
+}
+#hero button, #hero button a {
+    font-size: 18px;
+    text-transform: uppercase;
+    font-weight: 300;
+}
+
+/* ===============================================
+ # Services section
+   =============================================== */
+#services .services-cards {
+    display: flex;
+    justify-content: space-between;
+}
+#services .services-cards .card {
+    width: calc(25% - 15px);
+    background: var(--whiteGray);
+}
+
+/* Cards */
+.services-cards .card .__img {
+    height: 150px;
+    display: flex;
+    justify-content: center;
+}
+.services-cards .card .__img img {
+    height: 100%;
+}
+.services-cards .card {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.services-cards .card .__title {
+    font-size: 20px;
+    color: var(--darkGreen);
+}
+.services-cards .card .description {
+    font-size: 16px;
+}
+
+/* ===============================================
+ # About section
+   =============================================== */
+#about {
+    background: var(--grayWhite);
+}
+
+#about .division {
+    display: flex;
+    justify-content: space-between;
+}
+#about .division.one {
+    height: 450px;
+    margin-bottom: 10px;
+}
+#about > div > .division > .content,
+#about > div > .division > .division,
+#about > div > .division > .division > .content,
+#about > div > .division > .content .division .content {
+    width: calc(50% - 5px);
+}
+#about .content.__description { background: #217821ff;}
+#about .content.__mission { background: #005544ff;}
+#about .content.__vision { background: #16502dff;}
+#about .content.__values { background: #374837ff;}
+
+/* Description */
+#about .content.__description .__subtitle,
+#about .content.__description .__title,
+#about .content.__description .__description {
+    color: white;
+}
+#about .content.__description .__subtitle {
+    font-size: 22px;
+    font-weight: 300;
+}
+#about .content.__description .__title {
+    font-size: 28px;
+}
+#about .content.__description .__description {
+    font-size: 16px;
+    font-style: italic;
+}
+
+/* Image */
+#about .content.__image {
+    height: auto;
+    background: yellow;
+    overflow: hidden;
+}
+#about .content.__image img {
+    height: 100%;
+}
+/* Mission, Vision, Values */
+#about .content.__mission .title,
+#about .content.__vision .title,
+#about .content.__values .title {
+    font-size: 22px;
+    text-transform: uppercase;
+    color: white;
+}
+#about .content.__mission .description,
+#about .content.__vision .description,
+#about .content.__values li {
+    font-size: 14px;
+    color: white;
+}
+#about .content.__values li {
+    list-style: none;
+    margin-bottom: 10px;
+}
+#about .division .content .container .title {
+    margin-bottom: 10px;
+}
+
+/* ===============================================
+ # Gallery section
+   =============================================== */
+
+
+/* ===============================================
+ # Contact section
+   =============================================== */
+#contact {
+    background: var(--greenGray);
+}
+#contact .title {
+    color: white;
+}
+/* Contact content */
+.contact-content {
+    display: flex;
+    justify-content: space-between;
+}
+.contact-info, .contact-form {
+    width: calc(50% - 5px);
+}
+/* Contact content items */
+#contact p {
+    font-size: 16px;
+    color: white;
+    margin-bottom: 1.2rem;
+}
+#contact h4 {
+    font-size: 22px;
+    color: white;
+    text-transform: uppercase;
+    margin-bottom: 1rem;
+}
+/* Default contact form */
+input, textarea {
+    font-size: 16px;
+    padding: 0.5rem 1rem;
+    border: 2px solid var(--greenGrayDark);
+    background: var(--greenGrayLight);
+    color: white;
+    width: 100%;
+}
+textarea {
+    min-height: 250px;
+    font-family: 'Open Sans',sans-serif;
+}
+label {
+    margin-left: 8px;
+    color: white;
+    margin-bottom: 5px;
+}
+input[type=submit] {
+    border: 2px solid var(--primary);
+    background: var(--primary);
+    cursor: pointer;
+}
+/* Contact form */
+.item {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 25px;
+}
+.item-group .item {
+    width: calc(50% - 5px);
+}
+.item-group {
+    display: flex;
+    justify-content: space-between;
+}
+/* ===============================================
+ # Footer section
+   =============================================== */
+footer {
+    background: var(--greenGrayDark);
+    height: 80px;
+}
+footer .container-vertical {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100%;
+}
+footer p {
+    color: white;
+    font-size: 14px;
+}
