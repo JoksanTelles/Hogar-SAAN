@@ -67,6 +67,51 @@ h1.light,h2.light,h3.light,h4.light,h5.light,h6.light {font-weight: 300;}
     padding: 0 50px;
 }
 
+@media screen and (max-width: 780px) {    
+    .container {
+        padding: 40px;
+    }
+    .container-small {
+        padding: 20px;
+    }
+    .container-small-horizontal {
+        padding: 20px;
+    }
+    .container-vertical {
+        padding: 0 40px;
+    }
+}
+
+@media screen and (max-width: 600px) {    
+    .container {
+        padding: 30px;
+    }
+    .container-small {
+        padding: 20px;
+    }
+    .container-small-horizontal {
+        padding: 20px;
+    }
+    .container-vertical {
+        padding: 0 30px;
+    }
+}
+
+@media screen and (max-width: 780px) {    
+    .container {
+        padding: 25px;
+    }
+    .container-small {
+        padding: 20px;
+    }
+    .container-small-horizontal {
+        padding: 20px;
+    }
+    .container-vertical {
+        padding: 0 25px;
+    }
+}
+
 /* Buttons */
 .btn-small {
     padding: 1rem 1.2rem;
@@ -151,6 +196,53 @@ button.primary a {
     color: var(--greenGrayLight);
 }
 
+@media screen and (max-width: 680px) {
+    nav.desktop,
+    #header-navigation .secondary-menu {
+        display: none;
+    }
+}
+
+nav.responsive {
+    display: none;
+}
+nav.responsive .contenedor {
+    cursor: pointer;
+    position: absolute;
+    right: 30px;
+    top: 17px;
+}
+  
+.bar1, .bar2, .bar3 {
+    width: 25px;
+    height: 3px;
+    background: white;
+    margin: 6px 0;
+    transition: 0.4s;
+}
+
+.change .bar1 {
+    -webkit-transform: rotate(-45deg) translate(-5px, 5px);
+    transform: rotate(-45deg) translate(-5px, 5px);
+}
+
+.change .bar2 {opacity: 0;}
+
+.change .bar3 {
+    -webkit-transform: rotate(45deg) translate(-8px, -8px);
+    transform: rotate(45deg) translate(-8px, -8px);
+}
+.contenedor a {
+    display: none;
+}
+.contenedor.change a {
+    display: block;
+}
+@media screen and (max-width: 680px) {
+    nav.responsive {
+        display: block;
+    }
+}
 /* ===============================================
  # Hero section
    =============================================== */
@@ -178,7 +270,7 @@ header#hero {
     position: absolute;
     z-index: 10;
     width: 100%;
-    height: 100%;
+    height: 550px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -206,16 +298,22 @@ header#hero {
     text-transform: uppercase;
     font-weight: 300;
 }
-
+@media screen and (max-width: 750px) {
+    #hero .img-bg img {
+        width: auto;
+        height: 100%;
+    }
+}
 /* ===============================================
  # Services section
    =============================================== */
 #services .services-cards {
     display: flex;
     justify-content: space-between;
+    flex-wrap: wrap;
 }
 #services .services-cards .card {
-    width: calc(25% - 15px);
+    width: calc(25% - 5px);
     background: var(--whiteGray);
 }
 
@@ -240,7 +338,19 @@ header#hero {
 .services-cards .card .description {
     font-size: 16px;
 }
-
+@media screen and (max-width: 780px) {
+    #services .services-cards .card {
+        width: calc(50% - 5px);
+    }
+    #services .card {
+        margin-bottom: 10px;
+    }
+}
+@media screen and (max-width: 425px) {
+    #services .services-cards .card {
+        width: 100%;
+    }
+}
 /* ===============================================
  # About section
    =============================================== */
@@ -315,7 +425,52 @@ header#hero {
 #about .division .content .container .title {
     margin-bottom: 10px;
 }
-
+@media screen and (max-width: 1100px) {
+    #about .division.one {
+        height: 550px;
+    }
+}
+@media screen and (max-width: 920px) {
+    #about .container > .division {
+        flex-direction: column;
+    }
+    #about > div > .division > .content,
+    #about > div > .division > .division,
+    #about > div > .division > .content .division .content {
+        width: 100%;
+    }
+    #about .division.one {
+        height: auto;
+    }
+    /* Image */
+    #about .content.__image {
+        height: 500px;
+        display: flex;
+        align-items: center;
+    }
+    #about .content.__image img {
+        height: auto;
+        width: 100%;
+    }
+    /**/
+    #about .division.one .content:first-child,
+    #about .division .division .content {
+        margin-bottom: 10px;
+    }
+}
+@media screen and (max-width: 780px) {
+    #about .content.__image {
+        height: 100%;
+    }
+}
+@media screen and (max-width: 425px) {
+    #about > div > .division > .division {
+        flex-wrap: wrap;
+    }
+    #about > div > .division > .division > .content {
+        width: 100%;
+    }
+}
 /* ===============================================
  # Gallery section
    =============================================== */
@@ -386,6 +541,22 @@ input[type=submit] {
     display: flex;
     justify-content: space-between;
 }
+@media screen and (max-width: 760) {
+    #contact .contact-content {
+        flex-direction: column;
+    }
+    .contact-info, .contact-form {
+        width: 100%;
+    }
+}
+@media screen and (max-width: 425px) {
+    .item-group {
+        flex-direction: column;
+    }
+    .item-group .item {
+        width: 100%;
+    }
+}
 /* ===============================================
  # Footer section
    =============================================== */
@@ -402,4 +573,10 @@ footer .container-vertical {
 footer p {
     color: white;
     font-size: 14px;
+}
+@media screen and (max-width: 600px) {
+    footer .container-vertical {
+        justify-content: center;
+        flex-direction: column;
+    }
 }
