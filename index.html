@@ -34,12 +34,26 @@
                 <div class="left">
                     <h3 class="logo">Hogar SAAN</h3>
                 </div>
-                <nav class="right">
+                <nav class="right desktop">
                     <a href="#hero">Inicio</a>
                     <a href="#services">Servicios</a>
                     <a href="#about">Nosotros</a>
                     <a href="#gallery">Galería</a>
                     <a href="#contact">Contacto</a>
+                </nav>
+                <nav class="responsive right">
+                    <div class="contenedor" onclick="myFunction(this)">
+                        <div class="menu-icon">
+                            <div class="bar1"></div>
+                            <div class="bar2"></div>
+                            <div class="bar3"></div>
+                        </div>
+                        <a href="#hero">Inicio</a>
+                        <a href="#services">Servicios</a>
+                        <a href="#about">Nosotros</a>
+                        <a href="#gallery">Galería</a>
+                        <a href="#contact">Contacto</a>
+                    </div>
                 </nav>
             </div>
         </div>
@@ -230,4 +244,10 @@
         </div>
     </footer>
 </body>
+<script>
+    function myFunction(x) {
+      x.classList.toggle("change");
+    }
+</script>
+    
 </html>
