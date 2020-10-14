@@ -549,6 +549,7 @@ input::placeholder {
 textarea {
     min-height: 250px;
     font-family: 'Open Sans',sans-serif;
+    resize: vertical;
 }
 label {
     margin-left: 12px;
