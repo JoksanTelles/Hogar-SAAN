@@ -19,7 +19,7 @@
     <link rel="stylesheet" href="./css/main.css">
 </head>
 <body>
-    <header id="header-navigation">
+    <header id="header-navigation" class="closed">
         <div class="secondary-menu">
             <div class="container-vertical container-normal">
                 <div class="left">
@@ -29,11 +29,14 @@
                 <div class="right"><a href="" class="white">facebook</a></div>
             </div>
         </div>
-        <div class="primary-menu">
+        <div id="primary-menu" class="primary-menu">
+            <!-- Content navigation -->
             <div class="container-vertical container-normal">
+                <!-- Logo -->
                 <div class="left">
                     <h3 class="logo">Hogar SAAN</h3>
                 </div>
+                <!-- Navigation -->
                 <nav class="right desktop">
                     <a href="#hero">Inicio</a>
                     <a href="#services">Servicios</a>
@@ -41,21 +44,24 @@
                     <a href="#gallery">Galería</a>
                     <a href="#contact">Contacto</a>
                 </nav>
-                <nav class="responsive right">
-                    <div class="contenedor" onclick="myFunction(this)">
-                        <div class="menu-icon">
-                            <div class="bar1"></div>
-                            <div class="bar2"></div>
-                            <div class="bar3"></div>
-                        </div>
-                        <a href="#hero">Inicio</a>
-                        <a href="#services">Servicios</a>
-                        <a href="#about">Nosotros</a>
-                        <a href="#gallery">Galería</a>
-                        <a href="#contact">Contacto</a>
+                <!-- Menu icon responsive -->
+                <div class="right mobile">
+                    <div id="menu-open" class="menu-icon">
+                        <img src="./img/icon-menu-open.svg" alt="">
                     </div>
-                </nav>
+                    <div id="menu-close" class="menu-icon">
+                        <img src="./img/icon-menu-close.svg" alt="">
+                    </div>
+                </div>
             </div>
+            <!-- Content navigation on mobile -->
+            <nav class="mobile-navigation container-vertical">
+                <a href="#hero">Inicio</a>
+                <a href="#services">Servicios</a>
+                <a href="#about">Nosotros</a>
+                <a href="#gallery">Galería</a>
+                <a href="#contact">Contacto</a>
+            </nav>
         </div>
     </header>
     <main>
@@ -245,9 +251,18 @@
     </footer>
 </body>
 <script>
-    function myFunction(x) {
-      x.classList.toggle("change");
-    }
+    const menuClosed = document.getElementById('menu-open');
+    const menuOpened = document.getElementById('menu-close');
+    const navigation = document.getElementById('header-navigation');
+
+    //Apply the cached theme on reload
+    menuOpened.onclick = () => {
+        navigation.classList.replace('opened', 'closed');
+    };
+
+    menuClosed.onclick = () => {
+        navigation.classList.replace('closed', 'opened');
+    };
 </script>
     
 </html>
