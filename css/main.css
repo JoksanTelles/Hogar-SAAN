@@ -598,6 +598,10 @@ footer {
     background: var(--greenGrayDark);
     height: 80px;
 }
+footer a {
+    color: white;
+    text-decoration: underline;
+}
 footer .container-vertical {
     display: flex;
     justify-content: space-between;
