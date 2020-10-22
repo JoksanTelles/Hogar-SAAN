@@ -4,8 +4,8 @@
     <!-- Configuración general SEO -->
     <meta charset="UTF-8">
     <title>Hogar SAAN</title>
-    <meta name="author" content="Hogar SAAN">
-    <meta name="description" content="Meta Description">
+    <meta name="author" content="ENSAN comunicaciones">
+    <meta name="description" content="Residencia geriátrica">
 
     <!-- Compatibilidad y responsive design -->
     <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
@@ -23,10 +23,10 @@
         <div class="secondary-menu">
             <div class="container-vertical container-normal">
                 <div class="left">
-                    <p><b>Email:</b> hola@hogar-saan.com</p>
+                    <!--<p><b>Email:</b> hola@hogar-saan.com</p>-->
                     <p><b>Teléfono:</b> +52 229 935 3951</p>
                 </div>
-                <div class="right"><a href="" class="white">facebook</a></div>
+                <div class="right"><a href="https://www.facebook.com/HogarRemansoDPaz/" class="white">facebook</a></div>
             </div>
         </div>
         <div id="primary-menu" class="primary-menu">
@@ -65,17 +65,24 @@
         </div>
     </header>
     <main>
+
+        <!-- Hero - Section -->
         <header id="hero">
-            <div class="content">
-                <div class="container container-small">
-                    <h1 class="title">Nuestro compromiso con los que más amas</h1>
-                    <p class="description">Disfruta de nuestras estancias, vive en un ambiente cálido, familiar y hogareño.</p>
-                    <button class="btn-large primary"><a>Contáctanos</a></button>
+            <div class="container-vertical container-normal">
+                <div class="content">
+                    <div class="container-half">
+                        <h1 class="title">Nuestro compromiso con los que más amas</h1>
+                        <p class="description">Disfruta de nuestras estancias, vive en un ambiente cálido, familiar y hogareño.</p>
+                        <button class="btn-large secondary"><a href="#contact">Contáctanos</a></button>
+                    </div>
+                    <div class="container-half">
+                        <div class="img-slider">
+                            <img name="slideshow" src="" alt="">
+                        </div>
+                    </div>
                 </div>
             </div>
-            <div class="img-bg">
-                <img src="./img/DSC00040.JPG" alt="">
-            </div>
+
         </header>
 
         <!-- Services - Section -->
@@ -175,12 +182,34 @@
             </div>
         </section>
 
-        <!-- Gallery - Section--><!--
+        <!-- Gallery - Section-->
         <section id="gallery" class="section">
             <div class="container container-normal">
                 <h2 class="title">Visita nuestras instalaciones</h2>
+                <div class="gallery-container">
+                    <div class="img-gallery"><img src="img/gallery/image-slider-01.jpg" alt=""></div>
+                    <div class="img-gallery"><img src="img/gallery/image-slider-02.jpg" alt=""></div>
+                    <div class="img-gallery"><img src="img/gallery/image-slider-03.jpg" alt=""></div>
+                    <div class="img-gallery"><img src="img/gallery/image-slider-04.jpg" alt=""></div>
+                    <div class="img-gallery"><img src="img/gallery/image-slider-05.jpg" alt=""></div>
+                    <div class="img-gallery"><img src="img/gallery/image-slider-06.jpg" alt=""></div>
+                    <div class="img-gallery"><img src="img/gallery/image-slider-07.jpg" alt=""></div>
+                    <div class="img-gallery"><img src="img/gallery/image-slider-08.jpg" alt=""></div>
+                    <div class="img-gallery"><img src="img/gallery/image-slider-09.jpg" alt=""></div>
+                    <div class="img-gallery"><img src="img/gallery/image-slider-10.jpg" alt=""></div>
+                    <div class="img-gallery"><img src="img/gallery/image-slider-11.jpg" alt=""></div>
+                    <div class="img-gallery"><img src="img/gallery/image-slider-12.jpg" alt=""></div>
+                    <div class="img-gallery"><img src="img/gallery/image-slider-13.jpg" alt=""></div>
+                    <div class="img-gallery"><img src="img/gallery/image-slider-14.jpg" alt=""></div>
+                    <div class="img-gallery"><img src="img/gallery/image-slider-15.jpg" alt=""></div>
+                    <div class="img-gallery"><img src="img/gallery/image-slider-16.jpg" alt=""></div>
+                    <div class="img-gallery"><img src="img/gallery/image-slider-17.jpg" alt=""></div>
+                    <div class="img-gallery"><img src="img/gallery/image-slider-18.jpg" alt=""></div>
+                    <div class="img-gallery"><img src="img/gallery/image-slider-19.jpg" alt=""></div>
+                    <div class="img-gallery"><img src="img/gallery/image-slider-20.jpg" alt=""></div>
+                </div>
             </div>
-        </section>-->
+        </section>
 
         <!-- Contact - Section -->
         <section id="contact" class="section">
@@ -196,17 +225,17 @@
                     </div>
                     <div class="contact-form">
                         <p>Ponte en contacto con nosotros y a la brevedad atenderemos tu solicitud.</p>
-                        <form action="">
+                        <form name="contact" method="POST" data-netlify="true">
                             <div class="item-group">
                                 <!-- Name -->
                                 <div class="item">
                                     <label for="">Nombre</label>
-                                    <input type="text" placeholder="John">
+                                    <input type="text" name="name" placeholder="John">
                                 </div>
                                 <!-- Last name -->
                                 <div class="item">
                                     <label for="">Apellido</label>
-                                    <input type="text" placeholder="Doe">
+                                    <input type="text" name="last-name" placeholder="Doe">
                                 </div>
                             </div>
 
@@ -214,25 +243,28 @@
                                 <!-- Email -->
                                 <div class="item">
                                     <label for="">Email</label>
-                                    <input type="email" placeholder="nombre@dominio.com">
+                                    <input type="email" name="email" placeholder="nombre@dominio.com">
                                 </div>
                                 <!-- Phone-->
                                 <div class="item">
                                     <label for="">Phone</label>
-                                    <input type="phone" placeholder="+xx xxx-xxx-xxxx">
+                                    <input type="phone" name="phone" placeholder="+xx xxx-xxx-xxxx">
                                 </div>
                             </div>
 
                             <!-- Message -->
                             <div class="item">
                                 <label for="">Mensaje</label>
-                                <textarea name="" id=""></textarea>
+                                <textarea name="" id="" name="message" placeholder="Escribe tu mensaje aquí..."></textarea>
+                            </div>
+                            <div class="item-group">
+                                <div data-netlify-recaptcha="true"></div>
                             </div>
 
                             <div class="item-group">
                                 <!-- Submit -->
                                 <div class="item">
-                                    <input type="submit">
+                                    <input type="submit" name="submit">
                                 </div>
                             </div>
                         </form>
@@ -241,28 +273,22 @@
             </div>
         </section>
     </main>
+
+    <!-- Footer section -->
     <footer>
         <div class="container-vertical container-normal">
             <div class="left"><p>© 2020 Hogar SAAN · Diseño web por <a href="https://ensan-comunicaciones.com/">ENSAN comunicaciones</a>.</p></div>
-            <div class="right">
+            <!--<div class="right">
                 <p>Aviso de privacidad</p>
-            </div>
+            </div>-->
         </div>
     </footer>
+
+    <!-- Scripts -->
+    <script src="js/zoom.js"></script>
+    <script src="js/zoom-config.js"></script>
+    <script src="js/menu-responsive.js"></script>
+    <script src="js/slideshow.js"></script>
 </body>
-<script>
-    const menuClosed = document.getElementById('menu-open');
-    const menuOpened = document.getElementById('menu-close');
-    const navigation = document.getElementById('header-navigation');
-
-    //Apply the cached theme on reload
-    menuOpened.onclick = () => {
-        navigation.classList.replace('opened', 'closed');
-    };
-
-    menuClosed.onclick = () => {
-        navigation.classList.replace('closed', 'opened');
-    };
-</script>
     
 </html>
