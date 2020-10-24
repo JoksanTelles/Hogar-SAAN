@@ -444,7 +444,6 @@ header#hero {
 /* Image */
 #about .content.__image {
     height: auto;
-    background: yellow;
     overflow: hidden;
 }
 #about .content.__image img {
